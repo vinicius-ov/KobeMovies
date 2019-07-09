@@ -8,16 +8,15 @@
 
 import UIKit
 
-protocol MovieListViewModelProtocol: class {
+protocol MoviesViewModelProtocol: class {
     var loading: Bool { get }
     var movies: [Movie] { get }
 }
 
-final class MovieListViewModel {
+final class MoviesViewModel {
     var moviesService: MoviesServiceDelegate
     var movies: [Movie] = []
     var error: String = ""
-    var selectedMovie: Movie?
     
     init(moviesService: MoviesServiceDelegate = MoviesService()) {
         self.moviesService = moviesService
@@ -36,4 +35,9 @@ final class MovieListViewModel {
     func movieListSize() -> Int {
         return movies.count
     }
+    
+    func movieByIndex(index: Int) -> Movie {
+        return movies[index]
+    }
+    
 }

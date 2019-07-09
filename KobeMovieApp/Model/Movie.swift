@@ -40,8 +40,15 @@ class Movie: Codable {
         case overview
         case releaseDate = "release_date"
     }
+    
+    let genreDict: Dictionary<Int, String> =
+        [28: "Action",
+         12: "Adventure",
+         16: "Animation",
+         35: "Comedy"]
 }
 
 struct Results: Decodable {
     let results: [Movie]
 }
+

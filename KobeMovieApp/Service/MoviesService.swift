@@ -9,13 +9,18 @@
 import Foundation
 
 typealias CompletionMovies = ((ApiResult<[Movie]>) -> Void)
+typealias CompletionMovieDetails = ((ApiResult<Movie>) -> Void)
 
 protocol MoviesServiceDelegate: AnyObject {
     func fetchMovies(completion: @escaping CompletionMovies)
+    func fetchMovieDetails(byId id:Int, completion: @escaping CompletionMovieDetails)
 }
 
 final class MoviesService {
-    let baseUrl = "https://api.themoviedb.org/3/movie/upcoming?api_key=c5850ed73901b8d268d0898a8a9d8bff&language=en-US&page=1"
+    let baseUrlList = "/upcoming"
+    let baseUrlAuthParams = "?api_key=c5850ed73901b8d268d0898a8a9d8bff&language=en-US"
+    let baseUrl =  "https://api.themoviedb.org/3/movie"
+    
     private var delegate: ApiRequestDelegate?
     
     init(delegate: ApiRequestDelegate = ApiRequest()) {
@@ -25,7 +30,7 @@ final class MoviesService {
 
 extension MoviesService: MoviesServiceDelegate {
     func fetchMovies(completion: @escaping CompletionMovies) {
-        delegate?.request(withUrl: baseUrl, andCompletion: { (data, error) in
+        delegate?.request(withUrl: "\(baseUrl)\(baseUrlList)\(baseUrlAuthParams)", andCompletion: { (data, error) in
             guard let jsonData = data, let movies = try? JSONDecoder().decode(Results.self, from: jsonData) else{
                 completion(ApiResult.failure(ResultError.data(message: "Falha no decode")))
                 return
@@ -34,14 +39,14 @@ extension MoviesService: MoviesServiceDelegate {
         })
     }
     
-//    func fetchEvent(byId id: Int, completion: @escaping CompletionEvents) {
-//        delegate?.request(withUrl: "\(baseUrl)\(id)", andCompletion: { (data, error) in
-//            guard let jsonData = data, let events = try? JSONDecoder().decode([Event].self, from: jsonData) else{
-//                completion(ApiResult.failure(ResultError.data(message: "Falha no decode")))
-//                return
-//            }
-//            completion(ApiResult.success(events))
-//        })
-//    }
+    func fetchMovieDetails(byId id: Int, completion: @escaping CompletionMovieDetails) {
+        delegate?.request(withUrl: "\(baseUrl)\(id)\(baseUrlAuthParams)", andCompletion: { (data, error) in
+            guard let jsonData = data, let movieDetails = try? JSONDecoder().decode(Movie.self, from: jsonData) else{
+                completion(ApiResult.failure(ResultError.data(message: "Falha no decode")))
+                return
+            }
+            completion(ApiResult.success(movieDetails))
+        })
+    }
     
 }
