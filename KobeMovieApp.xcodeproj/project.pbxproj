@@ -20,6 +20,7 @@
 		F2E61C3722D431E6009A3BF1 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = F2E61C3622D431E6009A3BF1 /* Cartfile */; };
 		F2E61C3B22D43452009A3BF1 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2E61C3A22D43452009A3BF1 /* Alamofire.framework */; };
 		F2E61C3D22D43612009A3BF1 /* MoviesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E61C3C22D43612009A3BF1 /* MoviesService.swift */; };
+		F2E61C4322D43CBC009A3BF1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F2E61C4222D43CBC009A3BF1 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		F2E61C3622D431E6009A3BF1 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		F2E61C3A22D43452009A3BF1 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		F2E61C3C22D43612009A3BF1 /* MoviesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesService.swift; sourceTree = "<group>"; };
+		F2E61C4222D43CBC009A3BF1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				F2E61C3622D431E6009A3BF1 /* Cartfile */,
+				F2E61C4222D43CBC009A3BF1 /* README.md */,
 				F2665D9422D42250000A4B5E /* KobeMovieApp */,
 				F2665D9322D42250000A4B5E /* Products */,
 				F2E61C3922D43451009A3BF1 /* Frameworks */,
@@ -180,6 +183,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2E61C4322D43CBC009A3BF1 /* README.md in Resources */,
 				F2665DA022D42254000A4B5E /* LaunchScreen.storyboard in Resources */,
 				F2665D9D22D42254000A4B5E /* Assets.xcassets in Resources */,
 				F2E61C3722D431E6009A3BF1 /* Cartfile in Resources */,
