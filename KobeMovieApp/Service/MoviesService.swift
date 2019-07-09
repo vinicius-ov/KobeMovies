@@ -26,11 +26,11 @@ final class MoviesService {
 extension MoviesService: MoviesServiceDelegate {
     func fetchMovies(completion: @escaping CompletionMovies) {
         delegate?.request(withUrl: baseUrl, andCompletion: { (data, error) in
-            guard let jsonData = data, let movies = try? JSONDecoder().decode([Movie].self, from: jsonData) else{
+            guard let jsonData = data, let movies = try? JSONDecoder().decode(Results.self, from: jsonData) else{
                 completion(ApiResult.failure(ResultError.data(message: "Falha no decode")))
                 return
             }
-            completion(ApiResult.success(movies))
+            completion(ApiResult.success(movies.results))
         })
     }
     

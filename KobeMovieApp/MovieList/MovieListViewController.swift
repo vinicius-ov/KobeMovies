@@ -16,14 +16,17 @@ class MovieListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(self.reloadTable), name: NSNotification.Name(rawValue: "reloadTable"), object: nil)
+        
         movieListTable.delegate = self
         movieListTable.dataSource = self
         
         movieListViewModel = MovieListViewModel.init(moviesService: MoviesService())
-        
     }
 
-
+    @objc func reloadTable(){
+        movieListTable.reloadData()
+    }
 }
 
 extension MovieListViewController: UITableViewDataSource, UITableViewDelegate {
