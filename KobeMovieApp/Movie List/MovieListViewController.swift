@@ -10,10 +10,9 @@ import UIKit
 import Kingfisher
 
 class MovieListViewController: UIViewController {
-
+    
     @IBOutlet weak var movieListTable: UITableView!
     var moviesViewModel: MoviesViewModel!
-    var searchController: UISearchController!
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
@@ -26,14 +25,17 @@ class MovieListViewController: UIViewController {
         
         moviesViewModel = MoviesViewModel.init(moviesService: MoviesService())
         
-        searchController = UISearchController(searchResultsController: nil)
-        searchController.searchBar.placeholder = "Search movie title here"
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = true
         definesPresentationContext = true
         
         let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.init(red: 255/255, green: 43/255, blue: 119/255, alpha: 1.0)]
         navigationController?.navigationBar.titleTextAttributes = textAttributes
     }
-
+    
     @objc func reloadTable(){
         loadingIndicator.stopAnimating()
         movieListTable.reloadData()
@@ -51,7 +53,7 @@ extension MovieListViewController: UITableViewDataSource, UITableViewDelegate {
         cell.movieName.text = movie.title
         cell.genreName.text = movie.getGenreListAsString()
         cell.releaseDate.text = movie.releaseDate
-
+        
         if let imageUrl = movie.backdropPath {
             let path = "https://image.tmdb.org/t/p/w780/\(imageUrl)"
             cell.backdrop.kf.indicatorType = .activity
@@ -75,8 +77,13 @@ extension MovieListViewController: UITableViewDataSource, UITableViewDelegate {
 
 extension MovieListViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        let p = 0
+        let filtered = moviesViewModel.movies.filter { $0.title!.contains(searchController.searchBar.text!) }
+        if filtered.count == 0 && searchController.searchBar.text!.count == 0 {
+            moviesViewModel.movies = moviesViewModel.initialList
+        }else{
+            moviesViewModel.movies = filtered
+        }
+        reloadTable()
     }
-    
-    
 }
+

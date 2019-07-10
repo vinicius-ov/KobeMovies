@@ -17,6 +17,8 @@ final class MoviesViewModel {
     var moviesService: MoviesServiceDelegate
     var movies: [Movie] = []
     var error: String = ""
+    var isFiltering = false
+    var initialList: [Movie] = []
     
     init(moviesService: MoviesServiceDelegate = MoviesService()) {
         self.moviesService = moviesService
@@ -24,6 +26,7 @@ final class MoviesViewModel {
             switch result{
             case .success(let movies):
                 self.movies = movies
+                self.initialList = movies
                 NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadTable"), object: nil)
             case .failure(let error):
                 self.error = error.localizedDescription
