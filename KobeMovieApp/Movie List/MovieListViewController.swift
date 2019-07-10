@@ -14,6 +14,7 @@ class MovieListViewController: UIViewController {
     @IBOutlet weak var movieListTable: UITableView!
     var moviesViewModel: MoviesViewModel!
     var searchController: UISearchController!
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +33,7 @@ class MovieListViewController: UIViewController {
     }
 
     @objc func reloadTable(){
+        loadingIndicator.stopAnimating()
         movieListTable.reloadData()
     }
 }
@@ -49,9 +51,9 @@ extension MovieListViewController: UITableViewDataSource, UITableViewDelegate {
         cell.releaseDate.text = movie.releaseDate
 
         if let imageUrl = movie.backdropPath {
-            let path = "https://image.tmdb.org/t/p/w1280/\(imageUrl)"
-            cell.poster.kf.indicatorType = .activity
-            cell.poster.kf.setImage(with: URL(string: path))
+            let path = "https://image.tmdb.org/t/p/w780/\(imageUrl)"
+            cell.backdrop.kf.indicatorType = .activity
+            cell.backdrop.kf.setImage(with: URL(string: path))
         }
         
         return cell
@@ -63,6 +65,7 @@ extension MovieListViewController: UITableViewDataSource, UITableViewDelegate {
         let viewController =
             storyboard.instantiateViewController(withIdentifier: "MovieDetailsViewController") as! MovieDetailsViewController
         viewController.movieDetailViewModel = MovieDetailsViewModel.init(movieId: selectedMovie.id!)
+        
         navigationController?.pushViewController(viewController, animated: true)
     }
 }

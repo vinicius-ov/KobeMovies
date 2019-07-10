@@ -14,6 +14,9 @@ class MovieDetailsViewController: UIViewController {
     @IBOutlet weak var genresLabel: UILabel!
     @IBOutlet weak var overviewLabel: UILabel!
     @IBOutlet weak var releaseDate: UILabel!
+    @IBOutlet weak var posterImage: UIImageView!
+    @IBOutlet weak var overviewField: UITextView!
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
     var movieDetailViewModel: MovieDetailsViewModel!
 
@@ -27,10 +30,22 @@ class MovieDetailsViewController: UIViewController {
     }
     
     @objc func updateDetailsUI() {
+        loadingIndicator.stopAnimating()
         titleLabel.text = movieDetailViewModel.movie!.title ?? ""
         //genresLabel.text = genres
-        overviewLabel.text = movieDetailViewModel.movie!.overview ?? ""
+        
+        overviewField.text = movieDetailViewModel.movie!.overview ?? ""
+        overviewField.setContentOffset(.zero, animated: false)
         releaseDate.text = movieDetailViewModel.movie!.releaseDate ?? ""
+        
+        guard let movie = movieDetailViewModel.movie, let posterPath = movie.posterPath else {
+            return
+        }
+        
+        let path = "https://image.tmdb.org/t/p/w342\(posterPath)"
+        posterImage.kf.indicatorType = .activity
+        posterImage.kf.setImage(with: URL(string: path))
+        
     }
     
     @objc func dismiss(_ sender: Any) {
