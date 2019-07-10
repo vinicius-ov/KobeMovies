@@ -12,5 +12,7 @@ After download and build is done, project is ready to run, make sure to setup pr
 
 2 - Dependencies
 Alamofire - makes API service access much easier, abstracting the details of NSURLSession to speed up client development. Kind of overkill to this app but I'm used to it and I'd rather not copy from TMDB code generation.
+
 Kingfisher - image download, async downloading and caching in a few line of code.
+
 *Carthage - straightforward dependency manager
