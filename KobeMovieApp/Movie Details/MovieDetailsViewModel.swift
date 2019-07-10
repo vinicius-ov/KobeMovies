@@ -12,6 +12,7 @@ final class MovieDetailsViewModel {
     var moviesService: MoviesServiceDelegate
     var movie: Movie?
     var error = ""
+    var genreIds = [Int]()
     
     init(movieId: Int, moviesService: MoviesServiceDelegate = MoviesService()) {
         self.moviesService = moviesService
@@ -19,6 +20,7 @@ final class MovieDetailsViewModel {
             switch result{
             case .success(let movie):
                 self.movie = movie
+                self.movie?.genreIds = self.genreIds
                 NotificationCenter.default.post(name: NSNotification.Name(rawValue: "updateDetails"), object: nil)
             case .failure(let error):
                 self.error = error.localizedDescription

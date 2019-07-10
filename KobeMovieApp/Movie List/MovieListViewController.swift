@@ -29,7 +29,9 @@ class MovieListViewController: UIViewController {
         searchController = UISearchController(searchResultsController: nil)
         searchController.searchBar.placeholder = "Search movie title here"
         definesPresentationContext = true
-        navigationController?.navigationItem.searchController = searchController
+        
+        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.init(red: 255/255, green: 43/255, blue: 119/255, alpha: 1.0)]
+        navigationController?.navigationBar.titleTextAttributes = textAttributes
     }
 
     @objc func reloadTable(){
@@ -47,7 +49,7 @@ extension MovieListViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieListTableViewCell") as! MovieListTableViewCell
         let movie = moviesViewModel.movieByIndex(index: indexPath.row)
         cell.movieName.text = movie.title
-        //cell.genreName.text = movie.genreDict[movie.genreIds!.first!]
+        cell.genreName.text = movie.getGenreListAsString()
         cell.releaseDate.text = movie.releaseDate
 
         if let imageUrl = movie.backdropPath {
@@ -65,6 +67,7 @@ extension MovieListViewController: UITableViewDataSource, UITableViewDelegate {
         let viewController =
             storyboard.instantiateViewController(withIdentifier: "MovieDetailsViewController") as! MovieDetailsViewController
         viewController.movieDetailViewModel = MovieDetailsViewModel.init(movieId: selectedMovie.id!)
+        viewController.movieDetailViewModel.genreIds = selectedMovie.genreIds!
         
         navigationController?.pushViewController(viewController, animated: true)
     }

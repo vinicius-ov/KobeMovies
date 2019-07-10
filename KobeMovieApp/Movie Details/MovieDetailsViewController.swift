@@ -17,6 +17,13 @@ class MovieDetailsViewController: UIViewController {
     @IBOutlet weak var posterImage: UIImageView!
     @IBOutlet weak var overviewField: UITextView!
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var posterSize: NSLayoutConstraint! {
+        didSet {
+            if UIScreen.main.bounds.height < 670 {
+                posterSize.constant = 380
+            }
+        }
+    }
     
     var movieDetailViewModel: MovieDetailsViewModel!
 
@@ -32,7 +39,7 @@ class MovieDetailsViewController: UIViewController {
     @objc func updateDetailsUI() {
         loadingIndicator.stopAnimating()
         titleLabel.text = movieDetailViewModel.movie!.title ?? ""
-        //genresLabel.text = genres
+        genresLabel.text = movieDetailViewModel.movie!.getGenreListAsString()
         
         overviewField.text = movieDetailViewModel.movie!.overview ?? ""
         overviewField.setContentOffset(.zero, animated: false)
