@@ -40,7 +40,7 @@ extension MoviesService: MoviesServiceDelegate {
     }
     
     func fetchMovieDetails(byId id: Int, completion: @escaping CompletionMovieDetails) {
-        delegate?.request(withUrl: "\(baseUrl)\(id)\(baseUrlAuthParams)", andCompletion: { (data, error) in
+        delegate?.request(withUrl: "\(baseUrl)/\(id)\(baseUrlAuthParams)", andCompletion: { (data, error) in
             guard let jsonData = data, let movieDetails = try? JSONDecoder().decode(Movie.self, from: jsonData) else{
                 completion(ApiResult.failure(ResultError.data(message: "Falha no decode")))
                 return

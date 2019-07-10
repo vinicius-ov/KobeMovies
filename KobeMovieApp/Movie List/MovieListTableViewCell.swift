@@ -13,10 +13,11 @@ class MovieListTableViewCell: UITableViewCell {
     @IBOutlet weak var movieName: UILabel!
     @IBOutlet weak var genreName: UILabel!
     @IBOutlet weak var releaseDate: UILabel!
+    @IBOutlet weak var poster: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        selectionStyle = .none
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F22EF47F22D520E000EA0F6A /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22EF47E22D520E000EA0F6A /* MovieDetailsViewController.swift */; };
+		F22EF48122D561AF00EA0F6A /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F22EF48022D561AF00EA0F6A /* Kingfisher.framework */; };
 		F2665D9622D42250000A4B5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2665D9522D42250000A4B5E /* AppDelegate.swift */; };
 		F2665D9822D42250000A4B5E /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2665D9722D42250000A4B5E /* MovieListViewController.swift */; };
 		F2665D9B22D42250000A4B5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2665D9922D42250000A4B5E /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		F22EF47E22D520E000EA0F6A /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
+		F22EF48022D561AF00EA0F6A /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		F2665D9222D42250000A4B5E /* KobeMovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KobeMovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2665D9522D42250000A4B5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2665D9722D42250000A4B5E /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F22EF48122D561AF00EA0F6A /* Kingfisher.framework in Frameworks */,
 				F2E61C3B22D43452009A3BF1 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,6 +107,7 @@
 		F2E61C3922D43451009A3BF1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F22EF48022D561AF00EA0F6A /* Kingfisher.framework */,
 				F2E61C3A22D43452009A3BF1 /* Alamofire.framework */,
 			);
 			name = Frameworks;
@@ -148,7 +152,7 @@
 				F2665D8E22D42250000A4B5E /* Sources */,
 				F2665D8F22D42250000A4B5E /* Frameworks */,
 				F2665D9022D42250000A4B5E /* Resources */,
-				F2E61C3822D433FA009A3BF1 /* ShellScript */,
+				F2E61C3822D433FA009A3BF1 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -208,7 +212,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		F2E61C3822D433FA009A3BF1 /* ShellScript */ = {
+		F2E61C3822D433FA009A3BF1 /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -217,11 +221,14 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
 			);
+			name = Carthage;
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Kingfisher.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

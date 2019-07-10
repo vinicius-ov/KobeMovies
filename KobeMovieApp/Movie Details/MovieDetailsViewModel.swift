@@ -19,6 +19,7 @@ final class MovieDetailsViewModel {
             switch result{
             case .success(let movie):
                 self.movie = movie
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "updateDetails"), object: nil)
             case .failure(let error):
                 self.error = error.localizedDescription
                 print(self.error)

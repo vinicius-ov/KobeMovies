@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MovieListViewController: UIViewController {
 
@@ -46,6 +47,13 @@ extension MovieListViewController: UITableViewDataSource, UITableViewDelegate {
         cell.movieName.text = movie.title
         //cell.genreName.text = movie.genreDict[movie.genreIds!.first!]
         cell.releaseDate.text = movie.releaseDate
+
+        if let imageUrl = movie.backdropPath {
+            let path = "https://image.tmdb.org/t/p/w1280/\(imageUrl)"
+            cell.poster.kf.indicatorType = .activity
+            cell.poster.kf.setImage(with: URL(string: path))
+        }
+        
         return cell
     }
     
