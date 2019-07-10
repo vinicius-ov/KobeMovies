@@ -7,22 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F22EF47F22D520E000EA0F6A /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22EF47E22D520E000EA0F6A /* MovieDetailsViewController.swift */; };
+		F22EF48122D561AF00EA0F6A /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F22EF48022D561AF00EA0F6A /* Kingfisher.framework */; };
+		F25F40D022D5ACAC00F63934 /* Simulator Screen Shot - iPhone Xs - 2019-07-10 at 02.18.04.png in Resources */ = {isa = PBXBuildFile; fileRef = F25F40CF22D5ACAC00F63934 /* Simulator Screen Shot - iPhone Xs - 2019-07-10 at 02.18.04.png */; };
+		F25F40D222D5ACBF00F63934 /* Simulator Screen Shot - iPhone Xs - 2019-07-10 at 01.56.25.png in Resources */ = {isa = PBXBuildFile; fileRef = F25F40D122D5ACBF00F63934 /* Simulator Screen Shot - iPhone Xs - 2019-07-10 at 01.56.25.png */; };
+		F25F40D422D5ACC800F63934 /* Simulator Screen Shot - iPhone Xs - 2019-07-10 at 02.16.58.png in Resources */ = {isa = PBXBuildFile; fileRef = F25F40D322D5ACC800F63934 /* Simulator Screen Shot - iPhone Xs - 2019-07-10 at 02.16.58.png */; };
+		F25F40D622D5ACD300F63934 /* Simulator Screen Shot - iPhone Xs - 2019-07-10 at 02.17.43.png in Resources */ = {isa = PBXBuildFile; fileRef = F25F40D522D5ACD300F63934 /* Simulator Screen Shot - iPhone Xs - 2019-07-10 at 02.17.43.png */; };
 		F2665D9622D42250000A4B5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2665D9522D42250000A4B5E /* AppDelegate.swift */; };
 		F2665D9822D42250000A4B5E /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2665D9722D42250000A4B5E /* MovieListViewController.swift */; };
 		F2665D9B22D42250000A4B5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2665D9922D42250000A4B5E /* Main.storyboard */; };
 		F2665D9D22D42254000A4B5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2665D9C22D42254000A4B5E /* Assets.xcassets */; };
 		F2665DA022D42254000A4B5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2665D9E22D42254000A4B5E /* LaunchScreen.storyboard */; };
+		F287019C22D51CC600472DB3 /* MovieDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F287019B22D51CC600472DB3 /* MovieDetailsViewModel.swift */; };
 		F2E61C2A22D4256A009A3BF1 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E61C2922D4256A009A3BF1 /* Movie.swift */; };
 		F2E61C2D22D42833009A3BF1 /* MovieListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E61C2C22D42833009A3BF1 /* MovieListTableViewCell.swift */; };
-		F2E61C2F22D42D1B009A3BF1 /* MovieListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E61C2E22D42D1B009A3BF1 /* MovieListViewModel.swift */; };
+		F2E61C2F22D42D1B009A3BF1 /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E61C2E22D42D1B009A3BF1 /* MoviesViewModel.swift */; };
 		F2E61C3122D43105009A3BF1 /* ApiRequestDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E61C3022D43105009A3BF1 /* ApiRequestDelegate.swift */; };
 		F2E61C3322D4312E009A3BF1 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E61C3222D4312E009A3BF1 /* ApiRequest.swift */; };
 		F2E61C3722D431E6009A3BF1 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = F2E61C3622D431E6009A3BF1 /* Cartfile */; };
 		F2E61C3B22D43452009A3BF1 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2E61C3A22D43452009A3BF1 /* Alamofire.framework */; };
 		F2E61C3D22D43612009A3BF1 /* MoviesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E61C3C22D43612009A3BF1 /* MoviesService.swift */; };
+		F2E61C4322D43CBC009A3BF1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F2E61C4222D43CBC009A3BF1 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F22EF47E22D520E000EA0F6A /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
+		F22EF48022D561AF00EA0F6A /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		F25F40CF22D5ACAC00F63934 /* Simulator Screen Shot - iPhone Xs - 2019-07-10 at 02.18.04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot - iPhone Xs - 2019-07-10 at 02.18.04.png"; sourceTree = "<group>"; };
+		F25F40D122D5ACBF00F63934 /* Simulator Screen Shot - iPhone Xs - 2019-07-10 at 01.56.25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot - iPhone Xs - 2019-07-10 at 01.56.25.png"; sourceTree = "<group>"; };
+		F25F40D322D5ACC800F63934 /* Simulator Screen Shot - iPhone Xs - 2019-07-10 at 02.16.58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot - iPhone Xs - 2019-07-10 at 02.16.58.png"; sourceTree = "<group>"; };
+		F25F40D522D5ACD300F63934 /* Simulator Screen Shot - iPhone Xs - 2019-07-10 at 02.17.43.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot - iPhone Xs - 2019-07-10 at 02.17.43.png"; sourceTree = "<group>"; };
 		F2665D9222D42250000A4B5E /* KobeMovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KobeMovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2665D9522D42250000A4B5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2665D9722D42250000A4B5E /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
@@ -30,14 +44,16 @@
 		F2665D9C22D42254000A4B5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2665D9F22D42254000A4B5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F2665DA122D42254000A4B5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F287019B22D51CC600472DB3 /* MovieDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewModel.swift; sourceTree = "<group>"; };
 		F2E61C2922D4256A009A3BF1 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		F2E61C2C22D42833009A3BF1 /* MovieListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListTableViewCell.swift; sourceTree = "<group>"; };
-		F2E61C2E22D42D1B009A3BF1 /* MovieListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewModel.swift; sourceTree = "<group>"; };
+		F2E61C2E22D42D1B009A3BF1 /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
 		F2E61C3022D43105009A3BF1 /* ApiRequestDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestDelegate.swift; sourceTree = "<group>"; };
 		F2E61C3222D4312E009A3BF1 /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
 		F2E61C3622D431E6009A3BF1 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		F2E61C3A22D43452009A3BF1 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		F2E61C3C22D43612009A3BF1 /* MoviesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesService.swift; sourceTree = "<group>"; };
+		F2E61C4222D43CBC009A3BF1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F22EF48122D561AF00EA0F6A /* Kingfisher.framework in Frameworks */,
 				F2E61C3B22D43452009A3BF1 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -52,10 +69,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F25F40CE22D5AC9400F63934 /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				F25F40CF22D5ACAC00F63934 /* Simulator Screen Shot - iPhone Xs - 2019-07-10 at 02.18.04.png */,
+				F25F40D322D5ACC800F63934 /* Simulator Screen Shot - iPhone Xs - 2019-07-10 at 02.16.58.png */,
+				F25F40D522D5ACD300F63934 /* Simulator Screen Shot - iPhone Xs - 2019-07-10 at 02.17.43.png */,
+				F25F40D122D5ACBF00F63934 /* Simulator Screen Shot - iPhone Xs - 2019-07-10 at 01.56.25.png */,
+			);
+			path = Screenshots;
+			sourceTree = "<group>";
+		};
 		F2665D8922D42250000A4B5E = {
 			isa = PBXGroup;
 			children = (
 				F2E61C3622D431E6009A3BF1 /* Cartfile */,
+				F2E61C4222D43CBC009A3BF1 /* README.md */,
 				F2665D9422D42250000A4B5E /* KobeMovieApp */,
 				F2665D9322D42250000A4B5E /* Products */,
 				F2E61C3922D43451009A3BF1 /* Frameworks */,
@@ -74,11 +103,13 @@
 			isa = PBXGroup;
 			children = (
 				F2665D9522D42250000A4B5E /* AppDelegate.swift */,
+				F25F40CE22D5AC9400F63934 /* Screenshots */,
+				F2E61C4622D51C64009A3BF1 /* Movie Details */,
 				F2E61C3F22D436E8009A3BF1 /* Service */,
-				F2E61C3E22D436DA009A3BF1 /* MovieList */,
+				F2E61C3E22D436DA009A3BF1 /* Movie List */,
 				F2E61C2B22D42767009A3BF1 /* Model */,
-				F2665D9922D42250000A4B5E /* Main.storyboard */,
 				F2665D9C22D42254000A4B5E /* Assets.xcassets */,
+				F2665D9922D42250000A4B5E /* Main.storyboard */,
 				F2665D9E22D42254000A4B5E /* LaunchScreen.storyboard */,
 				F2665DA122D42254000A4B5E /* Info.plist */,
 			);
@@ -89,7 +120,6 @@
 			isa = PBXGroup;
 			children = (
 				F2E61C2922D4256A009A3BF1 /* Movie.swift */,
-				F2E61C2C22D42833009A3BF1 /* MovieListTableViewCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -97,18 +127,20 @@
 		F2E61C3922D43451009A3BF1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F22EF48022D561AF00EA0F6A /* Kingfisher.framework */,
 				F2E61C3A22D43452009A3BF1 /* Alamofire.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F2E61C3E22D436DA009A3BF1 /* MovieList */ = {
+		F2E61C3E22D436DA009A3BF1 /* Movie List */ = {
 			isa = PBXGroup;
 			children = (
 				F2665D9722D42250000A4B5E /* MovieListViewController.swift */,
-				F2E61C2E22D42D1B009A3BF1 /* MovieListViewModel.swift */,
+				F2E61C2E22D42D1B009A3BF1 /* MoviesViewModel.swift */,
+				F2E61C2C22D42833009A3BF1 /* MovieListTableViewCell.swift */,
 			);
-			path = MovieList;
+			path = "Movie List";
 			sourceTree = "<group>";
 		};
 		F2E61C3F22D436E8009A3BF1 /* Service */ = {
@@ -121,6 +153,15 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		F2E61C4622D51C64009A3BF1 /* Movie Details */ = {
+			isa = PBXGroup;
+			children = (
+				F287019B22D51CC600472DB3 /* MovieDetailsViewModel.swift */,
+				F22EF47E22D520E000EA0F6A /* MovieDetailsViewController.swift */,
+			);
+			path = "Movie Details";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -131,7 +172,7 @@
 				F2665D8E22D42250000A4B5E /* Sources */,
 				F2665D8F22D42250000A4B5E /* Frameworks */,
 				F2665D9022D42250000A4B5E /* Resources */,
-				F2E61C3822D433FA009A3BF1 /* ShellScript */,
+				F2E61C3822D433FA009A3BF1 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -180,17 +221,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2E61C4322D43CBC009A3BF1 /* README.md in Resources */,
 				F2665DA022D42254000A4B5E /* LaunchScreen.storyboard in Resources */,
 				F2665D9D22D42254000A4B5E /* Assets.xcassets in Resources */,
+				F25F40D222D5ACBF00F63934 /* Simulator Screen Shot - iPhone Xs - 2019-07-10 at 01.56.25.png in Resources */,
+				F25F40D422D5ACC800F63934 /* Simulator Screen Shot - iPhone Xs - 2019-07-10 at 02.16.58.png in Resources */,
+				F25F40D622D5ACD300F63934 /* Simulator Screen Shot - iPhone Xs - 2019-07-10 at 02.17.43.png in Resources */,
 				F2E61C3722D431E6009A3BF1 /* Cartfile in Resources */,
 				F2665D9B22D42250000A4B5E /* Main.storyboard in Resources */,
+				F25F40D022D5ACAC00F63934 /* Simulator Screen Shot - iPhone Xs - 2019-07-10 at 02.18.04.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		F2E61C3822D433FA009A3BF1 /* ShellScript */ = {
+		F2E61C3822D433FA009A3BF1 /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -199,11 +245,14 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
 			);
+			name = Carthage;
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Kingfisher.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -216,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F22EF47F22D520E000EA0F6A /* MovieDetailsViewController.swift in Sources */,
 				F2665D9822D42250000A4B5E /* MovieListViewController.swift in Sources */,
 				F2E61C3122D43105009A3BF1 /* ApiRequestDelegate.swift in Sources */,
 				F2E61C3D22D43612009A3BF1 /* MoviesService.swift in Sources */,
@@ -223,7 +273,8 @@
 				F2E61C2D22D42833009A3BF1 /* MovieListTableViewCell.swift in Sources */,
 				F2E61C2A22D4256A009A3BF1 /* Movie.swift in Sources */,
 				F2E61C3322D4312E009A3BF1 /* ApiRequest.swift in Sources */,
-				F2E61C2F22D42D1B009A3BF1 /* MovieListViewModel.swift in Sources */,
+				F2E61C2F22D42D1B009A3BF1 /* MoviesViewModel.swift in Sources */,
+				F287019C22D51CC600472DB3 /* MovieDetailsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,7 +421,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TG2GQ698YY;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -392,7 +443,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TG2GQ698YY;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
