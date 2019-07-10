@@ -19,14 +19,34 @@ final class MoviesViewModel {
     var error: String = ""
     var isFiltering = false
     var initialList: [Movie] = []
+    var page:Int?
     
     init(moviesService: MoviesServiceDelegate = MoviesService()) {
         self.moviesService = moviesService
-        moviesService.fetchMovies { result in
+        moviesService.fetchMovies(page: page) { result in
             switch result{
             case .success(let movies):
                 self.movies = movies
                 self.initialList = movies
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadTable"), object: nil)
+            case .failure(let error):
+                self.error = error.localizedDescription
+                print(self.error)
+            }
+        }
+    }
+    
+    func fetchAndAppendNewMovies(){
+        if page == nil {
+            page = 2
+        }else{
+            page = page! + 1
+        }
+        moviesService.fetchMovies(page: page) { result in
+            switch result{
+            case .success(let movies):
+                self.movies.append(contentsOf: movies)
+                self.initialList.append(contentsOf: movies)
                 NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadTable"), object: nil)
             case .failure(let error):
                 self.error = error.localizedDescription

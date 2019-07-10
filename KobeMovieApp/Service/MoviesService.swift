@@ -12,7 +12,7 @@ typealias CompletionMovies = ((ApiResult<[Movie]>) -> Void)
 typealias CompletionMovieDetails = ((ApiResult<Movie>) -> Void)
 
 protocol MoviesServiceDelegate: AnyObject {
-    func fetchMovies(completion: @escaping CompletionMovies)
+    func fetchMovies(page:Int?, completion: @escaping CompletionMovies)
     func fetchMovieDetails(byId id:Int, completion: @escaping CompletionMovieDetails)
 }
 
@@ -29,8 +29,9 @@ final class MoviesService {
 }
 
 extension MoviesService: MoviesServiceDelegate {
-    func fetchMovies(completion: @escaping CompletionMovies) {
-        delegate?.request(withUrl: "\(baseUrl)\(baseUrlList)\(baseUrlAuthParams)", andCompletion: { (data, error) in
+    func fetchMovies(page:Int?, completion: @escaping CompletionMovies) {
+        print("\(baseUrl)\(baseUrlList)\(baseUrlAuthParams)&page=\(page ?? 1)")
+        delegate?.request(withUrl: "\(baseUrl)\(baseUrlList)\(baseUrlAuthParams)&page=\(page ?? 1)", andCompletion: { (data, error) in
             guard let jsonData = data, let movies = try? JSONDecoder().decode(Results.self, from: jsonData) else{
                 completion(ApiResult.failure(ResultError.data(message: "Falha no decode")))
                 return

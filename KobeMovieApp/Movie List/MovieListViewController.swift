@@ -22,6 +22,7 @@ class MovieListViewController: UIViewController {
         
         movieListTable.delegate = self
         movieListTable.dataSource = self
+        movieListTable.prefetchDataSource = self
         
         moviesViewModel = MoviesViewModel.init(moviesService: MoviesService())
         
@@ -44,9 +45,18 @@ class MovieListViewController: UIViewController {
     }
 }
 
-extension MovieListViewController: UITableViewDataSource, UITableViewDelegate {
+extension MovieListViewController: UITableViewDataSource, UITableViewDelegate, UITableViewDataSourcePrefetching {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return moviesViewModel.movieListSize()
+    }
+    
+    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+        print("will prefetch \(indexPaths)")
+        if indexPaths.contains([0, moviesViewModel.movieListSize()-1]) {
+            print("reload")
+            moviesViewModel.fetchAndAppendNewMovies()
+            }
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

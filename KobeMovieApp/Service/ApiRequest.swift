@@ -17,6 +17,7 @@ class ApiRequest: ApiRequestDelegate {
             .responseJSON { (response: DataResponse) in
                 completion(response.data, response.result.error)
         }
+        
     }
     
 }
