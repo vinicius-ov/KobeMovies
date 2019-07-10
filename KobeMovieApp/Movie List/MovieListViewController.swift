@@ -25,6 +25,8 @@ class MovieListViewController: UIViewController {
         
         moviesViewModel = MoviesViewModel.init(moviesService: MoviesService())
         
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false

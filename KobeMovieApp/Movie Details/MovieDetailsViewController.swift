@@ -30,6 +30,8 @@ class MovieDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.navigationBar.prefersLargeTitles = false
+        
         navigationController?.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(self.dismiss))
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.updateDetailsUI), name: NSNotification.Name(rawValue: "updateDetails"), object: nil)
