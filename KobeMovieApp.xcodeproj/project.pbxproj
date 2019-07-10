@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		F22EF47F22D520E000EA0F6A /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22EF47E22D520E000EA0F6A /* MovieDetailsViewController.swift */; };
 		F22EF48122D561AF00EA0F6A /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F22EF48022D561AF00EA0F6A /* Kingfisher.framework */; };
+		F25F40D022D5ACAC00F63934 /* Simulator Screen Shot - iPhone Xs - 2019-07-10 at 02.18.04.png in Resources */ = {isa = PBXBuildFile; fileRef = F25F40CF22D5ACAC00F63934 /* Simulator Screen Shot - iPhone Xs - 2019-07-10 at 02.18.04.png */; };
+		F25F40D222D5ACBF00F63934 /* Simulator Screen Shot - iPhone Xs - 2019-07-10 at 01.56.25.png in Resources */ = {isa = PBXBuildFile; fileRef = F25F40D122D5ACBF00F63934 /* Simulator Screen Shot - iPhone Xs - 2019-07-10 at 01.56.25.png */; };
+		F25F40D422D5ACC800F63934 /* Simulator Screen Shot - iPhone Xs - 2019-07-10 at 02.16.58.png in Resources */ = {isa = PBXBuildFile; fileRef = F25F40D322D5ACC800F63934 /* Simulator Screen Shot - iPhone Xs - 2019-07-10 at 02.16.58.png */; };
+		F25F40D622D5ACD300F63934 /* Simulator Screen Shot - iPhone Xs - 2019-07-10 at 02.17.43.png in Resources */ = {isa = PBXBuildFile; fileRef = F25F40D522D5ACD300F63934 /* Simulator Screen Shot - iPhone Xs - 2019-07-10 at 02.17.43.png */; };
 		F2665D9622D42250000A4B5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2665D9522D42250000A4B5E /* AppDelegate.swift */; };
 		F2665D9822D42250000A4B5E /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2665D9722D42250000A4B5E /* MovieListViewController.swift */; };
 		F2665D9B22D42250000A4B5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2665D9922D42250000A4B5E /* Main.storyboard */; };
@@ -29,6 +33,10 @@
 /* Begin PBXFileReference section */
 		F22EF47E22D520E000EA0F6A /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
 		F22EF48022D561AF00EA0F6A /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		F25F40CF22D5ACAC00F63934 /* Simulator Screen Shot - iPhone Xs - 2019-07-10 at 02.18.04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot - iPhone Xs - 2019-07-10 at 02.18.04.png"; sourceTree = "<group>"; };
+		F25F40D122D5ACBF00F63934 /* Simulator Screen Shot - iPhone Xs - 2019-07-10 at 01.56.25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot - iPhone Xs - 2019-07-10 at 01.56.25.png"; sourceTree = "<group>"; };
+		F25F40D322D5ACC800F63934 /* Simulator Screen Shot - iPhone Xs - 2019-07-10 at 02.16.58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot - iPhone Xs - 2019-07-10 at 02.16.58.png"; sourceTree = "<group>"; };
+		F25F40D522D5ACD300F63934 /* Simulator Screen Shot - iPhone Xs - 2019-07-10 at 02.17.43.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot - iPhone Xs - 2019-07-10 at 02.17.43.png"; sourceTree = "<group>"; };
 		F2665D9222D42250000A4B5E /* KobeMovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KobeMovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2665D9522D42250000A4B5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2665D9722D42250000A4B5E /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +69,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F25F40CE22D5AC9400F63934 /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				F25F40CF22D5ACAC00F63934 /* Simulator Screen Shot - iPhone Xs - 2019-07-10 at 02.18.04.png */,
+				F25F40D322D5ACC800F63934 /* Simulator Screen Shot - iPhone Xs - 2019-07-10 at 02.16.58.png */,
+				F25F40D522D5ACD300F63934 /* Simulator Screen Shot - iPhone Xs - 2019-07-10 at 02.17.43.png */,
+				F25F40D122D5ACBF00F63934 /* Simulator Screen Shot - iPhone Xs - 2019-07-10 at 01.56.25.png */,
+			);
+			path = Screenshots;
+			sourceTree = "<group>";
+		};
 		F2665D8922D42250000A4B5E = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				F2665D9522D42250000A4B5E /* AppDelegate.swift */,
+				F25F40CE22D5AC9400F63934 /* Screenshots */,
 				F2E61C4622D51C64009A3BF1 /* Movie Details */,
 				F2E61C3F22D436E8009A3BF1 /* Service */,
 				F2E61C3E22D436DA009A3BF1 /* Movie List */,
@@ -204,8 +224,12 @@
 				F2E61C4322D43CBC009A3BF1 /* README.md in Resources */,
 				F2665DA022D42254000A4B5E /* LaunchScreen.storyboard in Resources */,
 				F2665D9D22D42254000A4B5E /* Assets.xcassets in Resources */,
+				F25F40D222D5ACBF00F63934 /* Simulator Screen Shot - iPhone Xs - 2019-07-10 at 01.56.25.png in Resources */,
+				F25F40D422D5ACC800F63934 /* Simulator Screen Shot - iPhone Xs - 2019-07-10 at 02.16.58.png in Resources */,
+				F25F40D622D5ACD300F63934 /* Simulator Screen Shot - iPhone Xs - 2019-07-10 at 02.17.43.png in Resources */,
 				F2E61C3722D431E6009A3BF1 /* Cartfile in Resources */,
 				F2665D9B22D42250000A4B5E /* Main.storyboard in Resources */,
+				F25F40D022D5ACAC00F63934 /* Simulator Screen Shot - iPhone Xs - 2019-07-10 at 02.18.04.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
